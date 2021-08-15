@@ -6,6 +6,7 @@ export default function Forecast(props) {
   if (props.data.dataValue === true) {
     function getForecastData(response) {
       let dailyWeather = response.data.daily;
+      console.log(dailyWeather);
     }
     function searchForecast(lat, lon) {
       let apiKey = props.data.apiKey;
