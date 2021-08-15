@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import SearchForm from "./SearchForm";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="card outside">
+        <div className="card-body">
+          <SearchForm />
+        </div>
+      </div>
+      <small className="coder">
+        Coded by Anel Sanders.{" "}
+        <a href="https://github.com/art-591/weather-react">GitHub</a>.
+      </small>
     </div>
   );
 }

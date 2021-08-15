@@ -1,0 +1,104 @@
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(253, 193, 104) 0%,
+    rgb(251, 128, 128) 90%
+  );
+}
+
+.container {
+  margin-top: 80px;
+  width: 675px;
+  opacity: 85%;
+}
+
+.current-city {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 50px;
+  color: rgb(255, 95, 109);
+}
+
+.outside {
+  border: none;
+
+  padding: 40px;
+}
+
+.current-emoji {
+  width: 175px;
+  margin-top: 5px;
+  position: relative;
+  right: 75px;
+  filter: hue-rotate(336deg);
+}
+
+.current-temp {
+  text-align: right;
+  margin-top: 20px;
+  color: rgb(255, 95, 109);
+}
+
+.current-temp #temp-now {
+  font-size: 50px;
+  vertical-align: top;
+}
+
+.units {
+  font-size: 20px;
+  vertical-align: top;
+  position: relative;
+  top: 12px;
+}
+
+.sky {
+  text-transform: capitalize;
+  color: rgb(255, 95, 109);
+}
+
+.property {
+  color: black;
+  opacity: 50%;
+}
+
+.data {
+  margin-bottom: 10px;
+  color: rgb(255, 95, 109);
+}
+
+.weather {
+  margin-bottom: 20px;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.forecast {
+  text-align: center;
+}
+
+.weekday {
+  font-size: 25px;
+  text-align: center;
+  color: rgb(255, 95, 109);
+}
+
+.icon {
+  width: 75px;
+  margin: -12px auto;
+  filter: hue-rotate(336deg);
+}
+
+.daily-temps {
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+  opacity: 50%;
+}
+
+.high {
+  font-weight: bolder;
+}
