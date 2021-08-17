@@ -39,7 +39,7 @@ body {
   color: rgb(255, 95, 109);
 }
 
-.current-temp #temp-now {
+.current-temp {
   font-size: 50px;
   vertical-align: top;
 }

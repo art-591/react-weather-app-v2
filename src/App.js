@@ -12,7 +12,7 @@ function App() {
       </div>
       <small className="coder">
         Coded by Anel Sanders.{" "}
-        <a href="https://github.com/art-591/weather-react">GitHub</a>.
+        <a href="https://github.com/art-591/react-weather-app-v2">GitHub</a>.
       </small>
     </div>
   );
