@@ -1,15 +1,15 @@
 body {
   background: radial-gradient(
-    circle at 10% 20%,
-    rgb(253, 193, 104) 0%,
-    rgb(251, 128, 128) 90%
+    circle at 0.1 0.2,
+    rgb(253, 193, 104) 0,
+    rgb(251, 128, 128) 0.9
   );
 }
 
 .container {
   margin-top: 80px;
   width: 675px;
-  opacity: 85%;
+  opacity: 0.85;
 }
 
 .outside {
@@ -40,7 +40,7 @@ body {
   margin-top: 10px;
   text-align: center;
   color: black;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .high {
