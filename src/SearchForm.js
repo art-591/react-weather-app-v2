@@ -23,8 +23,8 @@ export default function SearchForm() {
       iconID: response.data.weather[0].icon,
       latitude: response.data.coord.lat,
       longitude: response.data.coord.lon,
+      time: response.data.dt,
     });
-    console.log(weatherData);
   }
 
   function updateCity(event) {

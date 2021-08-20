@@ -11,7 +11,7 @@ export default function CurrentData(props) {
           <div className="row">
             <div className="col-8">
               <h1 className="current-city">{props.data.cityName}</h1>
-              <CurrentTime />
+              <CurrentTime time={props.data.time} />
               <div className="sky">{props.data.description}</div>
               <div className="weather">
                 Humidity:{" "}
