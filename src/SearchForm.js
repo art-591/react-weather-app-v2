@@ -5,57 +5,47 @@ import Forecast from "./Forecast";
 import "./SearchForm.css";
 
 export default function SearchForm() {
-  const [citySearch, setCitySearch] = useState(null);
-  const [city, setCity] = useState(null);
-  const [temp, setTemp] = useState(null);
-  const [description, setDescription] = useState(null);
-  const [humidity, setHumidity] = useState(null);
-  const [wind, setWind] = useState(null);
-  const [icon, setIcon] = useState(null);
-  const [data, setData] = useState(false);
-  const [lat, setLat] = useState(null);
-  const [lon, setLon] = useState(null);
-
-  let weatherData = {
-    cityName: city,
-    temperature: Math.round(temp),
-    weatherDescription: description,
-    humidityPercentage: humidity,
-    windSpeed: Math.round(wind),
-    iconID: icon,
-    dataValue: data,
-    latitude: lat,
-    longitude: lon,
-    units: "imperial",
-    apiKey: `1f6bf5f6e1d5da325c16280778c22717`,
-  };
+  const [weatherData, setWeatherData] = useState([
+    {
+      ready: false,
+    },
+  ]);
+  const [city, setCity] = useState("");
 
   function searchWeather(response) {
-    setTemp(response.data.main.temp);
-    setDescription(response.data.weather[0].description);
-    setHumidity(response.data.main.humidity);
-    setWind(response.data.wind.speed);
-    setIcon(response.data.weather[0].icon);
-    setCity(response.data.name);
-    setLat(response.data.coord.lat);
-    setLon(response.data.coord.lon);
-    setData(true);
+    setWeatherData({
+      ready: true,
+      cityName: response.data.name,
+      temperature: Math.round(response.data.main.temp),
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      windSpeed: Math.round(response.data.wind.speed),
+      iconID: response.data.weather[0].icon,
+      latitude: response.data.coord.lat,
+      longitude: response.data.coord.lon,
+    });
+    console.log(weatherData);
   }
 
   function updateCity(event) {
-    setCitySearch(event.target.value);
+    setCity(event.target.value);
+    console.log(city);
   }
 
   function searchCity(event) {
     event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${citySearch}&appid=${weatherData.apiKey}&units=${weatherData.units}`;
+    let units = "imperial";
+    let apiKey = `1f6bf5f6e1d5da325c16280778c22717`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(url).then(searchWeather);
   }
 
   function currentCoordinates(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
-    let urlCoords = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherData.apiKey}&units=${weatherData.units}`;
+    let units = "imperial";
+    let apiKey = `1f6bf5f6e1d5da325c16280778c22717`;
+    let urlCoords = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
     axios.get(urlCoords).then(searchWeather);
   }
 
