@@ -27,7 +27,7 @@ export default function CurrentData(props) {
               </div>
             </div>
             <div className="col-1">
-              <img src={iconUrl} alt="" className="current-emoji" />
+              <img src={iconUrl} alt="" className="current-icon" />
             </div>
             <div className="col-3 current-temp">
               <span>{weatherData.temperature}</span>

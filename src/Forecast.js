@@ -16,7 +16,7 @@ export default function Forecast(props) {
     }
     searchForecast(props.data.latitude, props.data.longitude);
 
-    return <div>Daily Forecast Coming Soon!</div>;
+    return <div className="forecast">Daily Forecast Coming Soon!</div>;
   } else {
     return <div></div>;
   }

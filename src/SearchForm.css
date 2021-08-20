@@ -1,0 +1,16 @@
+.search-bar {
+  width: 270px;
+  margin: 0 5px 0 0;
+  line-height: 31px;
+  position: relative;
+  top: 2px;
+}
+
+.btn {
+  padding: 6px;
+}
+
+.current-location-button {
+  position: relative;
+  right: 10px;
+}
