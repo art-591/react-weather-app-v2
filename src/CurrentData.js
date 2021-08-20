@@ -3,6 +3,7 @@ import "./CurrentData.css";
 import CurrentTime from "./CurrentTime";
 import WeatherIcon from "./WeatherIcon";
 import "./WeatherIcon.css";
+import Temperature from "./Temperature";
 
 export default function CurrentData(props) {
   if (props.data.ready === true) {
@@ -28,9 +29,8 @@ export default function CurrentData(props) {
             <div className="col-1">
               <WeatherIcon code={props.data.iconID} />
             </div>
-            <div className="col-3 current-temp">
-              <span>{props.data.temperature}</span>
-              <span className="units">°F</span>
+            <div className="col-3">
+              <Temperature fahrenheit={props.data.temperature} />
             </div>
           </div>
         </div>
