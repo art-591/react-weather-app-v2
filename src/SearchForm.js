@@ -29,7 +29,6 @@ export default function SearchForm() {
 
   function updateCity(event) {
     setCity(event.target.value);
-    console.log(city);
   }
 
   function searchCity(event) {
