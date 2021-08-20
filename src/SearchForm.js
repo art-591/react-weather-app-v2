@@ -64,32 +64,34 @@ export default function SearchForm() {
   }
 
   return (
-    <div className="weatherContainer">
-      <div className="row">
-        <form className="search col-10 row" onSubmit={searchCity}>
-          <input
-            type="text"
-            className="col-9"
-            placeholder="Search City"
-            id="city-input"
-            onChange={updateCity}
-          />
-          <input
-            type="submit"
-            className="col-3 btn btn-warning"
-            value="Submit"
-          />
-        </form>
-        <form className="col-2" onClick={searchCoordinates}>
-          <input
-            type="button"
-            className="current btn btn-warning"
-            value="Current"
-          />
-        </form>
+    <div className="SearchForm">
+      <div className="weatherContainer">
+        <div className="row">
+          <form className="search col-10 row" onSubmit={searchCity}>
+            <input
+              type="text"
+              className="col-9"
+              placeholder="Search City"
+              id="city-input"
+              onChange={updateCity}
+            />
+            <input
+              type="submit"
+              className="col-3 btn btn-warning"
+              value="Search"
+            />
+          </form>
+          <form className="col-2" onClick={searchCoordinates}>
+            <input
+              type="button"
+              className="current btn btn-warning"
+              value="Current"
+            />
+          </form>
+        </div>
+        <CurrentData data={weatherData} />
+        <Forecast data={weatherData} />
       </div>
-      <CurrentData data={weatherData} />
-      <Forecast data={weatherData} />
     </div>
   );
 }
