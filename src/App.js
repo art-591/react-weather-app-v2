@@ -13,7 +13,13 @@ export default function App() {
         </div>
         <footer className="coder">
           Coded by Anel Sanders and open-sourced on{" "}
-          <a href="https://github.com/art-591/react-weather-app-v2">GitHub</a>.
+          <a
+            href="https://github.com/art-591/react-weather-app-v2"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          .
         </footer>
       </div>
     </div>
