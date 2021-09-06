@@ -9,7 +9,7 @@ export default function ForecastDay(props) {
   }
   function minTemperature() {
     let temperature = Math.round(props.data.temp.min);
-    return `${temperature}°`;
+    return `${temperature}°F`;
   }
   function day() {
     let date = new Date(props.data.dt * 1000);
