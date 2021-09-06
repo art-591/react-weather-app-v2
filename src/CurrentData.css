@@ -38,3 +38,10 @@
 .weather {
   margin-bottom: 20px;
 }
+
+canvas {
+  vertical-align: middle;
+  position: relative;
+  top: 50px;
+  right: 50px;
+}

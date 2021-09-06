@@ -30,3 +30,8 @@
 .high {
   font-weight: bolder;
 }
+
+.forecast canvas {
+  top: 0;
+  right: 0;
+}
